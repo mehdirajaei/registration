@@ -157,5 +157,6 @@ def send_reset_email(to_email, reset_link):
         print("خطا در ارسال ایمیل:", e)
 
 if __name__ == "__main__":
-    init_db()
-    app.run(debug=True, use_reloader=False)
+    from waitress import serve  # More stable in production
+    serve(app2, host="0.0.0.0", port=8080)
+
