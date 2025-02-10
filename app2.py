@@ -158,5 +158,5 @@ def send_reset_email(to_email, reset_link):
 
 if __name__ == "__main__":
     from waitress import serve  # More stable in production
-    serve(app2, host="0.0.0.0", port=8080)
+    serve(app, host="0.0.0.0", port=8080)
 
